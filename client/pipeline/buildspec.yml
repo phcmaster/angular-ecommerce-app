@@ -9,10 +9,14 @@ phases:
     commands:
         - echo Installing source NPM dependencies...
         - npm install
+        - echo ----------------------- listando arquivos -----------------------
+        - ls -ll
+        - echo ----------------------- PATH DOS ARQUIVOS -----------------------
+        - pwd
         
   build:
     commands:
-        - echo Build started
+        - echo ----------------------- Build started -----------------------
         - npm run build
         
 artifacts:
