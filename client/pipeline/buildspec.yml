@@ -1,0 +1,22 @@
+version: 0.2
+
+env:
+    variables:
+        S3_BUCKET: "{{s3_bucket_url}}"
+
+phases:
+  pre_build:
+    commands:
+        - echo Installing source NPM dependencies...
+        - npm install
+        
+  build:
+    commands:
+        - echo Build started
+        - npm run build
+        
+artifacts:
+    files:
+        - '**/*'
+    base-directory: 'dist*'
+    discard-paths: yes
