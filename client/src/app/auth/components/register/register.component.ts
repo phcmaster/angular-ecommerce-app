@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   confirmPassword = '';
   errorMessage = '';
   loading = false;
+  
   constructor(
     private _api: ApiService,
     private _auth: AuthService,
@@ -35,16 +36,20 @@ export class RegisterComponent implements OnInit {
             fullName: this.fullName,
             email: this.email,
             password: this.password,
+            confirmPassword: this.confirmPassword,
           })
           .subscribe(
             (res) => {
               console.log(res);
-              this.loading = false;
+              this.loading = true;
               this._router.navigate(['/login']);
+    
+          
             },
             (err) => {
               this.errorMessage = err.error.message;
               this.loading = false;
+              console.log(err);
             }
           );
       }

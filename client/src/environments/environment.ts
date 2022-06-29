@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000/api/v1/',
+  apiUrlLogin: 'http://elb-demo-sa-east-1-1742005555.sa-east-1.elb.amazonaws.com:8080/api/v1/',
+  apiUrlProducts: 'http://elb-demo-sa-east-1-1742005555.sa-east-1.elb.amazonaws.com:8081/api/v1/'
 };
 
 /*

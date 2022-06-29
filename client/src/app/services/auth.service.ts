@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ApiService } from './api.service';
 import { TokenStorageService } from './token-storage.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -30,12 +31,13 @@ export class AuthService {
       })
       .pipe(
         map((res: any) => {
+
+          console.log(res)
           let user = {
             email: credentials.email,
             token: res.token,
           };
           this._token.setToken(res.token);
-          this._token.setUser(res.data[0]);
           console.log(res);
           this.userSubject.next(user);
           return user;
@@ -48,11 +50,15 @@ export class AuthService {
       fullName: user.fullName,
       email: user.email,
       password: user.password,
+      confirmPassword: user.confirmPassword,
+      role: [
+        'ADMIN'
+      ]
     });
   }
 
   logout() {
     this._token.clearStorage();
-    this.userSubject.next(null);
+    window.location.reload();
   }
 }

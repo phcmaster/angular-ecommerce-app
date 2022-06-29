@@ -9,17 +9,12 @@ import { ApiService } from './api.service';
   providedIn: 'root',
 })
 export class ProductService {
-  private url = environment.apiUrl;
+  private url = environment.apiUrlProducts;
 
   constructor(private http: HttpClient, private _api: ApiService) {}
 
   getAllProducts(limitOfResults = 9, page): Observable<Products> {
-    return this.http.get<Products>(this.url + 'products', {
-      params: {
-        limit: limitOfResults.toString(),
-        page: page,
-      },
-    });
+    return this.http.get<Products>(this.url + 'all/products');
   }
 
   getSingleProduct(id: Number): Observable<any> {

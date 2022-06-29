@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
         .login({ email: this.email, password: this.password })
         .subscribe(
           (res) => {
-            this.loading = false;
+            this.loading = true;
             this._router.navigate(['/']);
           },
           (err) => {

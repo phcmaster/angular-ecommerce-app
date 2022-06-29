@@ -7,12 +7,13 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl = environment.apiUrl;
+  private baseUrl = environment.apiUrlLogin;
+  private baseUrlProducts = environment.apiUrlProducts;
 
   constructor(private _http: HttpClient) {}
 
   getTypeRequest(url: string) {
-    return this._http.get(`${this.baseUrl}${url}`).pipe(
+    return this._http.get(`${this.baseUrlProducts}${url}`).pipe(
       map((res) => {
         return res;
       })
