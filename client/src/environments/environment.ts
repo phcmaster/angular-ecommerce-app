@@ -4,8 +4,8 @@
  
 export const environment = {
   production: false,
-  apiUrlSa: 'https://elb-demo-sa-east-1-1742005555.sa-east-1.elb.amazonaws.com/api/v1/',
-  apiUrLUs: 'https://elb-demo-sa-east-1-1742005555.sa-east-1.elb.amazonaws.com/api/v1/'
+  apiUrlSa: 'https://ALB-demo-us-east-1-1001165811.us-east-1.elb.amazonaws.com/api/v1/',
+  apiUrLUs: 'https://ALB-demo-us-east-1-1001165811.us-east-1.elb.amazonaws.com/api/v1/'
 };
 
 /*

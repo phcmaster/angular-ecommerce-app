@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private _http: HttpClient) {}
 
   getTypeRequest(url: string) {
-    return this._http.get(`${this.baseUrlProducts}${url}`).pipe(
+    return this._http.get(`${this.baseUrl}${url}`).pipe(
       map((res) => {
         return res;
       })
@@ -33,5 +33,4 @@ export class ApiService {
       })
     );
   }
-
 }
