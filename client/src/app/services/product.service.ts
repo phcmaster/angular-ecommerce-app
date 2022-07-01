@@ -14,7 +14,7 @@ export class ProductService {
   constructor(private http: HttpClient, private _api: ApiService) {}
 
   getAllProducts(limitOfResults = 9, page): Observable<Products> {
-    return this.http.get<Products>(this.url + 'all/products');
+    return this.http.get<Products>(this.url + 'all/products/region');
   }
 
   getSingleProduct(id: Number): Observable<any> {
