@@ -8,7 +8,6 @@ import { map } from 'rxjs/operators';
 })
 export class ApiService {
   private baseUrl = environment.apiUrlSa;
-  private baseUrlProducts = environment.apiUrLUs;
 
   constructor(private _http: HttpClient) {}
 
