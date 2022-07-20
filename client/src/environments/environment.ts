@@ -6,7 +6,7 @@
  
 export const environment = {
   production: false,
-  apiUrlSa: 'https://ALB-demo-us-east-1-1001165811.us-east-1.elb.amazonaws.com/api/v1/'
+  apiUrlSa: 'https://builder-demo.tk/api/v1/'
 };
 
 /*
