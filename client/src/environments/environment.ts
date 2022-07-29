@@ -6,7 +6,7 @@
  
 export const environment = {
   production: false,
-  apiUrlSa: 'https://builder-demo.tk/api/v1/'
+  apiUrlSa: 'https://www.builder-demo.tk/api/v1/'
 };
 
 /*
